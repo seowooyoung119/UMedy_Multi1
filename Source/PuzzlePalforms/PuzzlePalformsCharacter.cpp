@@ -18,6 +18,8 @@ DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
 APuzzlePalformsCharacter::APuzzlePalformsCharacter()
 {
+	UE_LOG(LogTemplateCharacter, Warning, TEXT("APuzzlePalformsCharacter Constructor"));
+	
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 		
@@ -73,6 +75,8 @@ void APuzzlePalformsCharacter::NotifyControllerChanged()
 
 void APuzzlePalformsCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
+	UE_LOG(LogTemplateCharacter, Warning, TEXT("APuzzlePalformsCharacter SetupPlayerInputComponent"));
+	
 	// Set up action bindings
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
 		

@@ -29,11 +29,9 @@ void APPMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	
-	if(HasAuthority())
+	if(HasAuthority() && ActiveTrigger > 0)
 	{
 		// 서버일 경우 움직임
-
-		if (0 >= ActiveTrigger) return;
 		
 		GlobalCurrentLocation = GetActorLocation(); // 현재 위치 추적
 
